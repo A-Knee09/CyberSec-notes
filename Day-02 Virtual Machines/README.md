@@ -69,15 +69,6 @@ There are several alternatives to Kali Linux that are also used for penetration 
 3. **BlackArch**:
  - A Linux distribution based on Arch Linux, known for its extensive collection of security tools. It's geared towards advanced users who prefer the Arch ecosystem.
 
-4. **Pentoo**:
- - A Live CD and Live USB designed for penetration testing and security assessment. It’s based on Gentoo Linux and provides a range of security tools.
-
-5. **REMnux**:
- - A Linux distribution specifically for reverse engineering and analyzing malicious software. It focuses on tools for malware analysis and digital forensics.
-
-6. **CAINE (Computer Aided INvestigative Environment)**:
- - A Linux distribution tailored for digital forensics, providing tools for evidence gathering and analysis.
-
 Each of these distributions offers unique features and tools, catering to different needs and preferences in the cybersecurity field.
 
 ## Conclusion
