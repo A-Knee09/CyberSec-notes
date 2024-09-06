@@ -39,9 +39,6 @@
 ### 5. **Hierarchy and Navigation:**
    - The Linux filesystem is structured as a tree, starting from the root directory and branching out into subdirectories. Users navigate through this structure using commands like `cd` (change directory), `ls` (list directory contents), and others.
 
-### 6. **FHS (Filesystem Hierarchy Standard):**
-   - The FHS defines the directory structure and directory contents in Unix-like operating systems, ensuring consistency across different distributions.
-
 Understanding the Linux file system is crucial for managing a Linux system, as it affects everything from user data management to system administration and application configuration.
 
 ## Linux Commands
@@ -59,8 +56,7 @@ Understanding the Linux file system is crucial for managing a Linux system, as i
 
 ### 1. `cd` command
 
-- The cd command in Linux stands for "change directory." It is used to navigate between directories in the file system from the command line.
-- Basically means going from one folder to another
+- The cd command in Linux stands for "change directory." It is used to navigate between directories in the file system from the command line.Basically means going from one folder to another
 - ```
   cd [directory name]
   ```
@@ -114,8 +110,7 @@ This covers the basics of `cd` command which would help you to navigate around y
   ![Screenshot 2024-08-12 135331](https://github.com/user-attachments/assets/4239fdaf-92d7-461b-8ea8-51fdd5aef278)
 
 ### 3. `ls` command 
-- The ls command in Linux is used to list the contents of a directory. It displays files, directories, and other types of file system objects within the directory you specify. By default, ls lists the contents of the current directory, but you can also specify other directories.
-- Syntax for ls :
+- The ls command in Linux is used to list the contents of a directory. It displays files, directories, and other types of file system objects within the directory you specify. By default, ls lists the contents of the current directory, but you can also specify other directories. Syntax for ls :
    ```
   ls [options] [directory]
   ```
@@ -127,6 +122,25 @@ This covers the basics of `cd` command which would help you to navigate around y
 
   ![Screenshot 2024-08-12 140413](https://github.com/user-attachments/assets/9290055f-058b-4666-928a-57cd975f75c2)
 
-- ***Including Hidden Files** : Some files may be hidden , in order to view those file we can write `ls -a' here -a stands for -all which is an option which allows us to list hidden files.
+- **Including Hidden Files `ls -a`** : Some files may be hidden , in order to view those file we can write `ls -a' here -a stands for -all which is an option which allows us to list hidden files.The hidden files are denoted by "." preceeding them.
 
-  
+  ![Screenshot 2024-09-06 202255](https://github.com/user-attachments/assets/4de2def5-e0ed-4ca8-8885-9ce15a92964b)
+
+  > Here I ran two ls commands, ls one shows all the directories and files that arent hidden and ls -a shows files that are hidden, such as .icons , .themes , .local , etc.
+
+- **Long list format `ls -l`** : The `ls -l` command provides a detailed listing of the files and directories in a directory, showing multiple attributes for each item.
+
+  ![Screenshot 2024-09-06 222548](https://github.com/user-attachments/assets/c184ae63-4db2-4148-9d09-94f01264b01c)
+
+  Here is what each column shows
+  - File Type and Permissions :
+      - The first character indicates the file type. `-` indicates its a regular file and  `d` indicates its a directory .
+      - The next nine characters represent the permissions for the file, divided into three groups (owner, group, others). `r` is for read , `w` is for write and `x` is for execute.
+      - for example `-rw-rw-r--` for file `hash.txt` says that owner can read and write the file , groups can read and write the file , and other users can only read the file.
+ 
+  - Number of Links (e.g., 1 or 2): This number represents the hard link count. For directories, it shows the number of subdirectories and itself.
+  - Owner (eg. user): The user who owns the file or directory.
+  - Group : The group associated with the file or directory. Typically, this is the primary group of the owner.
+  - File size: The size of the file in bytes. For directories, the size may refer to the size of the metadata (typically 4096 bytes).
+  - Last Modification Time (e.g., Aug 12 12:00): The last date and time the file or directory was modified.Format: Month Day Hour:Minute.
+  - File name (e.g., file1.txt or dir1): The name of the file or directory.
