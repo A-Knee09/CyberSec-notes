@@ -67,7 +67,12 @@ Understanding the Linux file system is crucial for managing a Linux system, as i
  - We can also create multiple directories at the same time. `mkdir dir-1 dir-2 dir-3 'dir 4' `.
  - We can create parent and child directories at the same time. `mkdir -p parent_dir/child_dir`.
 
-   ![Screenshot 2024-09-07 003001](https://github.com/user-attachments/assets/bc5b2723-98ab-4461-92fa-cccb1c84010e)
+   
+
+   https://github.com/user-attachments/assets/9f4357da-f622-41f2-8473-be75ea74edfc
+
+
+
 
    
 ### 3. `cd` : The change directory command
@@ -166,3 +171,14 @@ This covers the basics of `cd` command which would help you to navigate around y
 > You dont have to be inside a current directory to list their contents , you can also write `ls -option dir/file path`.
 
 ### `rmdir`: The remove directory command
+- The rmdir command in Linux is used to remove **empty directories**. It only works on directories that do not contain any files or subdirectories. To delete a directory you have to be outside that directory , so make sure to check the file path you're in.
+- The command can be used to remove a single directory. ``rmdir directory_name``.
+- The command can be used to remove multiple directories. ```rmdir dir1 dir2 'dir 3'```.
+- The command can be used parent/child directoriries using `-p` option. ```rmdir -p parent/child```.
+
+  ![Animation](https://github.com/user-attachments/assets/c32869ac-9903-421e-82ce-2d364a5de1d3)
+
+  
+  
+
+  
