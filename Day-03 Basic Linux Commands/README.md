@@ -67,20 +67,12 @@ Understanding the Linux file system is crucial for managing a Linux system, as i
  - We can also create multiple directories at the same time. `mkdir dir-1 dir-2 dir-3 'dir 4' `.
  - We can create parent and child directories at the same time. `mkdir -p parent_dir/child_dir`.
 
-   
-
-   https://github.com/user-attachments/assets/9f4357da-f622-41f2-8473-be75ea74edfc
-
-
-
-
-   
+   ![mkdir](https://github.com/user-attachments/assets/9f3ca388-5d54-4f69-aa7d-4f4dd44d1374)
+      
 ### 3. `cd` : The change directory command
 
 - The cd command in Linux stands for "change directory." It is used to navigate between directories in the file system from the command line.Basically means going from one folder to another
-- ```
-  cd [directory name]
-  ```
+- `cd [directory name]`
 - For example I have a folder in my Desktop directory named as 'dir'. In order to go from Desktop Directory to dir directory I can simply write `cd dir`
 
   ![Screenshot 2024-09-07 003128](https://github.com/user-attachments/assets/736e6d33-3687-450a-9529-818405146569)
@@ -122,10 +114,10 @@ This covers the basics of `cd` command which would help you to navigate around y
 
 
 ### 3. `ls`: The list contents command 
-- The ls command in Linux is used to list the contents of a directory. It displays files, directories, and other types of file system objects within the directory you specify. By default, ls lists the contents of the current directory, but you can also specify other directories. Syntax for ls :
-   ```
-  ls [options] [directory]
-  ```
+- The ls command in Linux is used to list the contents of a directory. It displays files, directories, and other types of file system objects within the directory you specify. By default, ls lists the contents of the current directory, but you can also specify other directories.
+  
+- Syntax for ls : `ls [options] [directory]`
+
 - You can write `ls --help` to open up the help section for ls command. This would display information about the ls commands and all the options the ls command comes with.
 
   ![Screenshot 2024-09-07 005338](https://github.com/user-attachments/assets/9122a7f9-f2c0-4670-9f94-746309f4620d)
@@ -176,9 +168,21 @@ This covers the basics of `cd` command which would help you to navigate around y
 - The command can be used to remove multiple directories. ```rmdir dir1 dir2 'dir 3'```.
 - The command can be used parent/child directoriries using `-p` option. ```rmdir -p parent/child```.
 
-  ![Animation](https://github.com/user-attachments/assets/c32869ac-9903-421e-82ce-2d364a5de1d3)
+  ![rmdir](https://github.com/user-attachments/assets/2cf3ba6c-5a21-4b32-82d5-a6783e2ab4fc)
 
-  
-  
+### `cat` command:  View, concatenate, and create files
+- The `cat` command in Linux is used to view, concatenate, and create files. It's one of the most commonly used commands for working with text files. Basic syntax is `cat -option file_name`.
+- We can create a new file using the command. `cat > file`. After entering the command, you can type your content. Press Ctrl+D to save and exit.
+- We can then display the contents of this file. `cat file`.
+- We can append content to an existing file. `cat >> file`.
+- We can concatenate multiple files. `cat file1 file2`. The content of file1.txt and file2.txt will be displayed sequentially.
+- We can copy contents of one file to another. `cat file1 > file2`.
+- We can display the number of lines using `cat -n file`.
 
+  ![Screenshot 2024-09-07 074411](https://github.com/user-attachments/assets/58b9c175-be14-43d0-9573-726f794bec1e)
+
+### `rm` command: The `rm` command in Linux is used to remove files and directories. Unlike `rmdir`, the rm command can delete both files and non-empty directories, and it has various options to control how files and directories are removed.
+- We can remove a file. `rm file`.
+- We can remove multiple files. `rm file1 file2`.
+  
   
