@@ -162,7 +162,7 @@ This covers the basics of `cd` command which would help you to navigate around y
 > [!IMPORTANT]
 > You dont have to be inside a current directory to list their contents , you can also write `ls -option dir/file path`.
 
-### `rmdir`: The remove directory command
+### 4. `rmdir`: The remove directory command
 - The rmdir command in Linux is used to remove **empty directories**. It only works on directories that do not contain any files or subdirectories. To delete a directory you have to be outside that directory , so make sure to check the file path you're in.
 - The command can be used to remove a single directory. ``rmdir directory_name``.
 - The command can be used to remove multiple directories. ```rmdir dir1 dir2 'dir 3'```.
@@ -170,7 +170,7 @@ This covers the basics of `cd` command which would help you to navigate around y
 
   ![rmdir](https://github.com/user-attachments/assets/2cf3ba6c-5a21-4b32-82d5-a6783e2ab4fc)
 
-### `cat` command:  View, concatenate, and create files
+### 5. `cat` command:  View, concatenate, and create files
 - The `cat` command in Linux is used to view, concatenate, and create files. It's one of the most commonly used commands for working with text files. Basic syntax is `cat -option file_name`.
 - We can create a new file using the command. `cat > file`. After entering the command, you can type your content. Press Ctrl+D to save and exit.
 - We can then display the contents of this file. `cat file`.
@@ -181,8 +181,30 @@ This covers the basics of `cd` command which would help you to navigate around y
 
   ![Screenshot 2024-09-07 074411](https://github.com/user-attachments/assets/58b9c175-be14-43d0-9573-726f794bec1e)
 
-### `rm` command: The `rm` command in Linux is used to remove files and directories. Unlike `rmdir`, the rm command can delete both files and non-empty directories, and it has various options to control how files and directories are removed.
+### 6. `rm` command:  remove/delete command 
+-The `rm` command in Linux is used to remove files and directories. Unlike `rmdir`, the rm command can delete both files and non-empty directories, and it has various options to control how files and directories are removed.
 - We can remove a file. `rm file`.
 - We can remove multiple files. `rm file1 file2`.
-  
-  
+
+  ![rm](https://github.com/user-attachments/assets/651efbb4-66e9-4400-97e7-10a9621300fd)
+
+- We can delete a directory and its contents (subdirectories and files) in two ways using `-r` recursive option. `rm -r dir` deletes the file and its contents without giving a prompt. The `rm -rf dir` deletes directories and its contents forcefully without giving a prompt , `-f` stands for forcefully. Be careful when using this option.
+- We can delte a directory and its contents with a prompt by using `-i` option.
+
+  ![rm -r](https://github.com/user-attachments/assets/a4fb1624-2224-4feb-96e9-cf40d3647054)
+
+### 7. `cp` command: Copy command
+- The cp command in Linux is used to copy files and directories from one location to another. It's a fundamental command for file management. The syntax for cp command is simple `cp [options] source destination`.
+- We can also rename the file while copying by using `cp file1 newfile`. This will copy file1 to newfile in the same directory or another specified path.
+- We can copy multiple files to a directory. `cp file1 file2 /path/to/destination/`.
+- we can also copy a directory and its contents using recursive option `-r`. `cp -r myfolder /home/kali `.
+
+  ![Screenshot 2024-09-07 092431](https://github.com/user-attachments/assets/862d0ede-81f0-4a53-8bb5-680fb63b3e51)
+
+### 8. `mv` command: Move command
+- The mv command in Linux is used to move or rename files and directories. It can either move a file from one location to another or rename files and directories in place. Syntax is `mv [options] file/dir source destination`.
+- We can do almost all the same stuff we did the cp command , like renaming , moving multiple files or moving directories using `-r` option.
+
+  ![Screenshot 2024-09-07 094356](https://github.com/user-attachments/assets/b1d9e3eb-5a52-4234-b76d-2da86f31ca58)
+
+### 9. `chmod` command: Change file or directory permission
