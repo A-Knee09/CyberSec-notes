@@ -1,4 +1,4 @@
-# Virtual Machines and Kali Linux 🖥️
+# DAY-02 Virtual Machines and Kali Linux 🖥️
 
 Welcome to the Cybersecurity Notes repository. This document provides fundamental insights into virtual machines, Kali Linux, and alternative tools used in cybersecurity.
 
