@@ -1,4 +1,4 @@
-# Introduction to Cyber Security 🐱‍💻
+# DAY-01 Introduction to Cyber Security 🐱‍💻
 
 This README file contains the fundamentals of cybersecurity based on the notes I’ve made. Cybersecurity is essential in today’s digital world to protect sensitive information and maintain the integrity of systems and networks against various threats.
 
