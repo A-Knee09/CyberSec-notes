@@ -2,7 +2,7 @@
 Understanding the basic commands is essential for navigating the file system, managing files, and interacting with the system efficiently from the command line. This guide introduces some of the fundamental commands every beginner should know, helping you get started with tasks such as navigating directories, managing files, and checking network connectivity. It may seem overwhelming at first but it isnt difficult at all. 
 
 >[!NOTE]
-> Please note, this README doesn't cover every Linux command or their full range of options. Instead, it focuses on the essential commands for everyday use, providing a solid foundation for further exploration. I highly suggest on exploring more commands and their options once you're done with this readme :D.
+> Please note, this README doesn't cover every Linux command or their full range of options. Instead, it focuses on the essential commands for everyday use, providing a solid foundation for further exploration. I highly suggest on exploring more commands and their options once you're done with this readme :D
 
 ## Linux File Structure
 
