@@ -1,4 +1,8 @@
-# Basic Linux Commands
+# DAY-03 Basic Linux Commands 
+Understanding the basic commands is essential for navigating the file system, managing files, and interacting with the system efficiently from the command line. This guide introduces some of the fundamental commands every beginner should know, helping you get started with tasks such as navigating directories, managing files, and checking network connectivity. It may seem overwhelming at first but it isnt difficult at all. 
+
+>[!NOTE]
+> Please note, this README doesn't cover every Linux command or their full range of options. Instead, it focuses on the essential commands for everyday use, providing a solid foundation for further exploration. I highly suggest on exploring more commands and their options once you're done with this readme :D.
 
 ## Linux File Structure
 
@@ -41,7 +45,7 @@
 
 Understanding the Linux file system is crucial for managing a Linux system, as it affects everything from user data management to system administration and application configuration.
 
-## Linux Commands
+# Linux Commands
 - Linux commands are text-based instructions used to perform various tasks on a Linux operating system through the terminal.
 - These commands range from basic operations like navigating directories to complex tasks like process management and network configuration.
 - commands are written in the format
@@ -57,7 +61,7 @@ Understanding the Linux file system is crucial for managing a Linux system, as i
 ### 1. `pwd` : The where the hell am I command
 - The pwd command in Linux stands for "print working directory." It is used to display the full path of the current directory you are in. This command helps you know exactly where you are in the directory structure at any given time. If you use the cd command to move to a different directory and want to confirm your new location, running pwd will show you the complete path of where you are.
 
-    ![Screenshot 2024-09-07 002632](https://github.com/user-attachments/assets/1c90de0e-ba71-4eb4-9440-df7a35bd41dd)
+  ![Screenshot 2024-09-07 002632](https://github.com/user-attachments/assets/1c90de0e-ba71-4eb4-9440-df7a35bd41dd)
    
 
  ### 2. `mkdir` : The make directory command 
@@ -74,18 +78,14 @@ Understanding the Linux file system is crucial for managing a Linux system, as i
 - The cd command in Linux stands for "change directory." It is used to navigate between directories in the file system from the command line.Basically means going from one folder to another
 - `cd [directory name]`
 - For example I have a folder in my Desktop directory named as 'dir'. In order to go from Desktop Directory to dir directory I can simply write `cd dir`
-
-  ![Screenshot 2024-09-07 003128](https://github.com/user-attachments/assets/736e6d33-3687-450a-9529-818405146569)
-
-  > Please know that when we open terminal by default we are in our home `~` directory. For convinience purpose I'm already inside the Desktop dir.
    
 - In order to go back to Desktop directory you can write `cd ..`.
-
-  ![Screenshot 2024-09-07 003350](https://github.com/user-attachments/assets/dbead542-56b1-4fff-838d-ce6e418fc059)
-  
+ 
 - If a directory exist with spaces in it's name (for example 'dir 3' dir) we can write it as `cd 'dir 3'`.
 
-  ![Screenshot 2024-09-07 003455](https://github.com/user-attachments/assets/efb7cb95-6ac3-43fd-b1c5-35518e48b849)
+  ![Screenshot 2024-09-09 063844](https://github.com/user-attachments/assets/447266de-de6b-491f-ab9a-801737dfd92b)
+
+  > Please know that when we open terminal by default we are in our home `~` directory. For convinience purpose I'm already inside the Desktop dir.
 
 - In order to go back to the home directory we can simply write `cd` or `cd ~`. Whenever we open our terminal , by default we are in home directory
 
@@ -208,3 +208,38 @@ This covers the basics of `cd` command which would help you to navigate around y
   ![Screenshot 2024-09-07 094356](https://github.com/user-attachments/assets/b1d9e3eb-5a52-4234-b76d-2da86f31ca58)
 
 ### 9. `chmod` command: Change file or directory permission
+- During `ls -l` command we discussed breifly about file permission and users. The chmod command in Linux is used to change the permissions of files and directories. Each file or directory in Linux has associated permissions that determine who can read, write, or execute it.
+- Permissions can be assigned two ways. Relative permission and absolute permission
+- Relative permissions use symbols (r, w, x) and operators (+, -, =) to modify file permissions in relation to the current state. For example:
+  ```
+  chmod u+rwx,g+rx,o+r file.txt // (give users permission to read,write,execute , groups to read and execute and other users to only read file)
+  chmod u-w,g-r,o-x file.txt // (remove write permission from user , read permission from group and execute permission from other users)
+  chmod a+rwx file.txt // a indicates apply for all
+  ``` 
+- Absolute permissions use a numeric (octal) system to represent the read, write, and execute permissions. Each permission is associated with a number, and a three-digit code represents the permissions for the user, group, and others. For example `chmod 664 file.txt`
+
+  ![1_Qd9k5fOi4crDc33l0VveaQ](https://github.com/user-attachments/assets/95b0d15a-cbb9-4679-8b56-2586b5604470)
+
+- Here we have two files name `newfile` and `file2`. Both of them have the same permission for users (read and write) , groups (read and write) and others(read only).We can change these permissions to our needs using `chmod`.
+
+  ![Screenshot 2024-09-09 060818](https://github.com/user-attachments/assets/f421fe0b-e650-4184-aac8-7261a4023f21)
+
+### 10. `ping` command
+- The ping command in Linux (and other operating systems) is used to test the connectivity between your computer and another device, typically over a network. It works by sending ICMP (Internet Control Message Protocol) Echo Request packets to a specified host and waiting for a response. Syntax is `ping destination`
+- We can send specific number of packets using `-c option`.
+
+  ![Screenshot 2024-09-09 062453](https://github.com/user-attachments/assets/9da07ab6-a29f-42a6-9465-88cdcc54c04f)
+
+### 11. `ifconfig` command: What's my IP
+- The ifconfig command in Linux is used to configure, manage, and display network interfaces. It is primarily used to view and modify the configuration of the network interfaces on your system, such as setting IP addresses, netmasks, or bringing interfaces up and down. You can simply write `ifconfig` to find your systems IP address and network interfaces.
+
+### 12. 'sudo' command : Superuser command
+- The sudo command in Linux stands for "superuser do" and allows a permitted user to execute a command as the superuser (root) or another user, as specified by the security policy. It is typically used to perform administrative tasks, such as installing software, changing file permissions, or modifying system configuration, that require elevated privileges.
+- When you use sudo, you'll typically be prompted to enter your user password (not the root password) to verify your identity.
+- For example I have a file named `newfile`. As a user I only have the permission to write the file and not read or execute it. Using `sudo` command I can read the contents of the file as a superuser.
+
+  ![Screenshot 2024-09-09 065809](https://github.com/user-attachments/assets/69df8569-c59d-440c-902f-b47e8e5d1137)
+
+
+
+
